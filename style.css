@@ -1,0 +1,107 @@
+.container {
+    width: 2500px;
+    height: 1600px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    display: inline-flex;
+}
+
+.menu-list {
+    margin-top: 150px;
+}
+
+.content {
+    margin-left: 50px;
+}
+
+.show-item p {
+    margin-left: 30px;
+}
+
+.name-list {
+    width: 500px;
+    font-size: 3rem;
+}
+
+.length-list {
+    position: relative;
+    top: 50px;
+    left: 2120px;
+    visibility: hidden;
+}
+
+.list-item {
+    clear: both;
+    display: flex;
+    position: relative;
+    margin: 1rem -15px;
+    width: 100%;
+}
+
+.item {
+    cursor: pointer;
+    width: 14.28%;
+}
+
+.item .box-item {
+    height: 35rem;
+    width: 20rem;
+    margin: 0 15px;
+    position: relative;
+    border-radius: .5rem;
+}
+
+.item img {
+    height: 30rem;
+    width: 20rem;
+    margin: auto;
+    display: block;
+    transition: .3s all ease-in-out;
+    border-radius: 1rem;
+}
+
+.list-second {
+    margin-top: -3rem;
+}
+
+
+/* .item:hover p {
+    visibility: visible;
+} */
+
+.item:hover .length-list {
+    visibility: visible;
+}
+
+.item:hover .box-item img {
+    transform: scale(1.05);
+}
+
+.item p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+    /* transition: .3s all ease-in-out; */
+}
+
+.item:hover p {
+    opacity: 1;
+}
+
+.item:hover .box-item:after {
+    content: '';
+    position: absolute;
+    top: -.5rem;
+    left: -.5rem;
+    right: -.5rem;
+    bottom: 45px;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid oldlace;
+    border-radius: 1rem;
+}

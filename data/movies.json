@@ -1,0 +1,43 @@
+{
+    "json": [{
+            "id": 1,
+            "name": "BumbleBee 2018",
+            "poster": "./image/MV5BMjUwNjU5NDMyNF5BMl5BanBnXkFtZTgwNzgxNjM2NzM@._V1_.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Inception 2012",
+            "poster": "./image/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UY1200_CR90,0,630,1200_AL_.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Blade runner 2049",
+            "poster": "./image/Blade_Runner_2049_poster.jpg"
+        },
+        {
+            "id": 1,
+            "name": "Avengers: endgame",
+            "poster": "./image/220px-Avengers_Endgame_bia_teaser.jpg"
+        },
+        {
+            "id": 1,
+            "name": "Avengers: Age of Ultron",
+            "poster": "./image/lo-dien-hinh-anh-sieu-hot-cua-dan-nhan-vat-avengers-2.jfif"
+        },
+        {
+            "id": 1,
+            "name": "Spider-Man: Homecoming",
+            "poster": "./image/mv5bogq5ytm3yzctotvmmc00ogiylwfkztytmwywowzhmja2mwmwxkeyxkfqcgdeqxvymjuymte5ma-_v1_.jpg"
+        },
+        {
+            "id": 1,
+            "name": "Vệ binh dải ngân hà",
+            "poster": "./image/GOTG-Star-lord-1402994701.jpg"
+        },
+        {
+            "id": 1,
+            "name": "Star Wars: Thần lực thức tỉnh",
+            "poster": "./image/Star_Wars_The_Force_Awakens_7.jpg"
+        }
+    ]
+}

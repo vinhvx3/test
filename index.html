@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In Home</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu-list">
+            <img src="image/menu.png" alt="" />
+        </div>
+        <div class="content" id="app">
+            <div class="show-item">
+                <p class="name-list">Đề Xuất</p>
+                <p class="length-list">1 / 8</p>
+                <div class="list-item">
+                    <div class="item" v-for="items in item">
+                        <div class="box-item">
+                            <img :src=items.poster alt="" />
+                        </div>
+                        <p class="nameItem">{{items.name}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="show-item list-second">
+                <p class="name-list">Xu Hướng</p>
+                <p class="length-list">1 / 8</p>
+                <div class="list-item">
+                    <div class="item" v-for="items in item">
+                        <div class="box-item">
+                            <img :src=items.poster alt="" />
+                        </div>
+                        <p class="nameItem">{{items.name}}</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                ex: 1,
+                item: [],
+
+
+            },
+            created() {
+                $.getJSON('/data/movies.json', function(res) {
+                    app.item = res.json;
+                    let root = app.item;
+                    console.log(root);
+
+                })
+            },
+            mounted: function() {
+
+            },
+            methods: {
+                createElementItem: function(item) {
+                    return
+                }
+            },
+        })
+    </script>
+</body>
+
+
+</html>
