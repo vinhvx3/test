@@ -18,24 +18,24 @@
             <div class="show-item">
                 <p class="name-list">Đề Xuất</p>
                 <p class="length-list">1 / 8</p>
-                <div class="list-item">
-                    <div class="item" v-for="items in item">
-                        <div class="box-item">
-                            <img :src=items.poster alt="" />
+                <div class="list-item" :style="{right: currentPosition.y === 0 ? rightPercent + '%' : '0'}">
+                    <div class="item" v-for="(item, index) in items">
+                        <div class="box-item" :class="{selected: arrSelect[0][index]} ">
+                            <img :src=item.image alt=" " :class="{selectedimg: arrSelect[0][index]} " />
                         </div>
-                        <p class="nameItem">{{items.name}}</p>
+                        <p class="nameItem " :class="{selectedname: arrSelect[0][index]}">{{item.title}}</p>
                     </div>
                 </div>
             </div>
-            <div class="show-item list-second">
+            <div class="show-item list-second ">
                 <p class="name-list">Xu Hướng</p>
-                <p class="length-list">1 / 8</p>
-                <div class="list-item">
-                    <div class="item" v-for="items in item">
-                        <div class="box-item">
-                            <img :src=items.poster alt="" />
+                <p class="length-list ">1 / 8</p>
+                <div class="list-item " :style="{right: currentPosition.y === 1 ? rightPercent + '%' : '0'}">
+                    <div class="item " v-for="(item, index) in items ">
+                        <div class="box-item " :class="{selected: arrSelect[1][index]} ">
+                            <img :src=item.image alt=" " :class="{selectedimg: arrSelect[1][index]} " />
                         </div>
-                        <p class="nameItem">{{items.name}}</p>
+                        <p class="nameItem ">{{item.title}}</p>
                     </div>
 
 
@@ -43,37 +43,10 @@
             </div>
         </div>
     </div>
-    <script src="js/vue.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                ex: 1,
-                item: [],
-
-
-            },
-            created() {
-                $.getJSON('/data/movies.json', function(res) {
-                    app.item = res.json;
-                    let root = app.item;
-                    console.log(root);
-
-                })
-            },
-            mounted: function() {
-
-            },
-            methods: {
-                createElementItem: function(item) {
-                    return
-                }
-            },
-        })
-    </script>
+    <script src="js/vue.js "></script>
+    <script src="js/jquery.min.js "></script>
+    <script src="js/jquery-migrate.min.js "></script>
+    <script src="js/main.js "></script>
 </body>
 
 
